@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data class="ItemBinding">
+        <variable
+            name="ItemListViewModel"
+            type="com.github.showitemlist.viewmodel.ItemListViewModel" />
+    </data>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <ImageView
+        android:id="@+id/imgView_icon"
+        android:layout_width="100dp"
+        android:padding="3dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_dashboard_black_24dp__1_" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtView_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/teal_200"
+            android:text="@{ItemListViewModel.title}"
+             />
+
+        <TextView
+            android:id="@+id/txtView_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="@{ItemListViewModel.description}"
+            />
+
+    </LinearLayout>
+</LinearLayout>
+    <View
+        android:id="@+id/item_separator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="2dp"
+        android:background="@color/black" />
+</LinearLayout>
+</layout>
